@@ -18,7 +18,7 @@
     <body class="fixed-nav sticky-footer bg-dark" id="page-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <a class="navbar-brand" href="/">WEB BÁN THUỐC</a>
-            <h2 class="navbar-collapse" style="color: white;">Thêm mới thuốc</h2>
+            <h4 class="navbar-collapse" style="color: white;">Thêm mới thuốc</h4>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="addDrug">
@@ -55,22 +55,39 @@
                                         <div>
                                             <label>Tên thuốc</label>
                                             <input type="text" class="form-control" name="drugName" placeholder="Tên thuốc / Hàm lượng">
+                                 
+                                @if ($errors->has('drugName'))
+                                    <div class="alert alert-danger" >{{ $errors->first('drugName') }}</div>
+                                @endif
+                            
                                         </div>
                                         <div>
                                             <label>Mã thuốc</label>
                                             <input type="text" class="form-control" name="drugCode" placeholder="TH99" >
+                                  @if ($errors->has('drugCode'))
+                                    <div class="alert alert-danger">{{ $errors->first('drugCode') }}</div>
+                                @endif
                                         </div>
                                         <div>
                                             <label>Cảm quan</label>
                                             <input type="text" class="form-control" name="drugDescription" placeholder="Màu sắc,hình dáng,khối lượng,hình ảnh vv..">
+                                             @if ($errors->has('drugDescription'))
+                                    <div class="alert alert-danger">{{ $errors->first('drugDescription') }}</div>
+                                @endif
                                         </div>
                                         <div>
                                             <label>Giá nhập</label>
                                             <input type="number" name="drugImportPrice" class="form-control" >
+                                             @if ($errors->has('drugImportPrice'))
+                                    <div class="alert alert-danger">{{ $errors->first('drugImportPrice') }}</div>
+                                @endif
                                         </div>
                                         <div>
                                             <label>Giá bán lẻ</label>
                                             <input type="number" name="drugPrice" class="form-control">
+                                            @if ($errors->has('drugPrice'))
+                                    <div class="alert alert-danger">{{ $errors->first('drugPrice') }}</div>
+                                @endif
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
@@ -84,7 +101,10 @@
                                         </div>
                                         <div>
                                             <label>Hạn dùng</label>
-                                            <input type="date" class="form-control">
+                                            <input type="date" name="drugDate" class="form-control">
+                                            @if ($errors->has('drugDate'))
+                                    <div class="alert alert-danger">{{ $errors->first('drugDate') }}</div>
+                                @endif
                                         </div>
                                         <div>
                                             <label>Nhóm thuốc</label>
@@ -95,9 +115,10 @@
                                                 <option value="">Vitamin A</option>
                                             </select>
                                         </div>
+                                       <!-- -->
+                                       <!--  @include('errors') -->
                                         <input type="submit" name="addDrug" class="btn btn-default" value="Thêm mới">
                                     </div>
-                                {!! Form::close() !!}
                                 <!-- </form> -->
                             </div>
                         </div>

@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\drugs;
 
 class addDrugController extends Controller
 {
-    public function submit(){
-    	$drug = new drugs;
-    	
+    public function submit(Request $request){
+    	$this->validate($request, [
+    		'drugName' => 'required',
+    		'drugCode' => 'required',
+    		'drugDescription' => 'required',
+    		'drugImportPrice' => 'required',
+    		'drugPrice' => 'required',
+            'drugDate' => 'required'
+    	]);
+    	return 'SUCCESS';
     }
 }
