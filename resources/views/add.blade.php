@@ -84,17 +84,16 @@
                                         </div>
                                         <div>
                                             <label>Hạn dùng</label>
-                                            <input type="date" class="form-control">
+                                            <input type="date" name="shelfLife" class="form-control">
                                         </div>
                                         <div>
                                             <label>Nhóm thuốc</label>
-                                            <select id ="thuoc" name="thuoc">
-                                                <option value="">Bao cao su</option>
-                                                <option value="">Vitamin C</option>
-                                                <option value="">Vitamin B</option>
-                                                <option value="">Vitamin A</option>
+                                            <select id ="thuoc" name="medicine">
+                                                <option value="1">Vitamin A</option>
+                                                <option value="2">Vitamin B</option>
                                             </select>
                                         </div>
+                                        <input type="hidden" name="quantity" value="0">
                                         <input type="submit" name="addDrug" class="btn btn-default" value="Thêm mới">
                                     </div>
                                 {!! Form::close() !!}
