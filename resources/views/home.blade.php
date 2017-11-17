@@ -13,7 +13,7 @@
     </head>
     <body class="fixed-nav sticky-footer bg-dark" id="page-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <a class="navbar-brand" href="index.html">WEB BÁN THUỐC </a>
+            <a class="navbar-brand" href="index.html">WEB BÁN THUỐC -ADMIN </a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="addDrug">
