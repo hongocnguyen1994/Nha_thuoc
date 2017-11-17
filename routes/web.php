@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/add.php', function () {
+Route::get('/add', function () {
     return view('add');
+});
+Route::get('/list', function () {
+    return view('list');
 });

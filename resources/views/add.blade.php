@@ -10,21 +10,25 @@
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="css/sb-admin.css" rel="stylesheet">
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="js/sb-admin.min.js"></script>
     </head>
     <body class="fixed-nav sticky-footer bg-dark" id="page-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <a class="navbar-brand" href="index.html">WEB BÁN THUỐC - BBBBBB</a>
+            <a class="navbar-brand" href="/">WEB BÁN THUỐC</a>
             <h2 class="navbar-collapse" style="color: white;">Thêm mới thuốc</h2>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="addDrug">
-                        <a class="nav-link" href="charts.html">
+                        <a class="nav-link" href="add">
                         <i class="fa fa-fw fa-area-chart"></i>
                         <span class="nav-link-text">Thêm mới thuốc</span>
                         </a>
                     </li>
                     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                        <a class="nav-link" href="tables.html">
+                        <a class="nav-link" href="list">
                         <i class="fa fa-fw fa-table"></i>
                         <span class="nav-link-text">Danh sách thuốc</span>
                         </a>
@@ -107,26 +111,6 @@
                     <div class="col-md-1"></div>
                 </div>
             </div>
-        </div>
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-        <script src="js/sb-admin.min.js"></script>
-        <script>
-            $('#toggleNavPosition').click(function() {
-              $('body').toggleClass('fixed-nav');
-              $('nav').toggleClass('fixed-top static-top');
-            });
-            
-        </script>
-        <script>
-            $('#toggleNavColor').click(function() {
-              $('nav').toggleClass('navbar-dark navbar-light');
-              $('nav').toggleClass('bg-dark bg-light');
-              $('body').toggleClass('bg-dark bg-light');
-            });
-            
-        </script>
         </div>
     </body>
 </html>
