@@ -20,3 +20,4 @@ Route::get('/add', function () {
 Route::get('/list', function () {
     return view('list');
 });
+Route::post('/add/submit', 'addDrugController@submit');

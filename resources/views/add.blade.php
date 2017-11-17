@@ -49,47 +49,31 @@
                     <div class="col-md-10">
                         <div class="panel panel-default">
                             <div class="panel-body">
-                                <form class="row">
+                                {!! Form::open(['url' => '/add/submit', 'class' => 'row']) !!}
+                                <!-- <form class="row" method="POST" action="/add/submit" accept-charset="UTF-8"> -->
                                     <div class="col-sm-6">
                                         <div>
                                             <label>Tên thuốc</label>
-                                            <input type="text" class="form-control"  placeholder="Tên thuốc / Hàm lượng">
+                                            <input type="text" class="form-control" name="drugName" placeholder="Tên thuốc / Hàm lượng">
                                         </div>
                                         <div>
                                             <label>Mã thuốc</label>
-                                            <input type="text" class="form-control" placeholder="TH99" >
+                                            <input type="text" class="form-control" name="drugCode" placeholder="TH99" >
                                         </div>
                                         <div>
                                             <label>Cảm quan</label>
-                                            <input type="text" class="form-control" placeholder="Màu sắc,hình dáng,khối lượng,hình ảnh vv..">
+                                            <input type="text" class="form-control" name="drugDescription" placeholder="Màu sắc,hình dáng,khối lượng,hình ảnh vv..">
                                         </div>
                                         <div>
                                             <label>Giá nhập</label>
-                                            <input type="number" class="form-control" >
+                                            <input type="number" name="drugImportPrice" class="form-control" >
                                         </div>
                                         <div>
                                             <label>Giá bán lẻ</label>
-                                            <input type="number" class="form-control">
-                                        </div>
-                                        <div>
-                                            <label>Nhóm thuốc</label>
-                                            <select id ="thuoc" name="thuoc">
-                                                <option value="">Bao cao su</option>
-                                                <option value="">Vitamin C</option>
-                                                <option value="">Vitamin B</option>
-                                                <option value="">Vitamin A</option>
-                                            </select>
+                                            <input type="number" name="drugPrice" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div>
-                                            <label>Đơn vị xuất</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <div>
-                                            <label>Giới hạn</label>
-                                            <input type="text" class="form-control">
-                                        </div>
                                         <div>
                                             <label>Số dư ban đầu</label>
                                             <input type="number" class="form-control" >
@@ -102,9 +86,19 @@
                                             <label>Hạn dùng</label>
                                             <input type="date" class="form-control">
                                         </div>
+                                        <div>
+                                            <label>Nhóm thuốc</label>
+                                            <select id ="thuoc" name="thuoc">
+                                                <option value="">Bao cao su</option>
+                                                <option value="">Vitamin C</option>
+                                                <option value="">Vitamin B</option>
+                                                <option value="">Vitamin A</option>
+                                            </select>
+                                        </div>
                                         <input type="submit" name="addDrug" class="btn btn-default" value="Thêm mới">
                                     </div>
-                                </form>
+                                {!! Form::close() !!}
+                                <!-- </form> -->
                             </div>
                         </div>
                     </div>
