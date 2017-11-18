@@ -101,22 +101,28 @@
                                         </div>
                                         <div>
                                             <label>Hạn dùng</label>
+<<<<<<< HEAD
                                             <input type="date" name="drugDate" class="form-control">
                                             @if ($errors->has('drugDate'))
                                     <div class="alert alert-danger">{{ $errors->first('drugDate') }}</div>
                                 @endif
+=======
+                                            <input type="date" name="shelfLife" class="form-control">
+>>>>>>> 95181e2e6645843fb8e81848ca0d54f8b8b3c4f7
                                         </div>
                                         <div>
                                             <label>Nhóm thuốc</label>
-                                            <select id ="thuoc" name="thuoc">
-                                                <option value="">Bao cao su</option>
-                                                <option value="">Vitamin C</option>
-                                                <option value="">Vitamin B</option>
-                                                <option value="">Vitamin A</option>
+                                            <select id ="thuoc" name="medicine">
+                                                <option value="1">Vitamin A</option>
+                                                <option value="2">Vitamin B</option>
                                             </select>
                                         </div>
+<<<<<<< HEAD
                                        <!-- -->
                                        <!--  @include('errors') -->
+=======
+                                        <input type="hidden" name="quantity" value="0">
+>>>>>>> 95181e2e6645843fb8e81848ca0d54f8b8b3c4f7
                                         <input type="submit" name="addDrug" class="btn btn-default" value="Thêm mới">
                                     </div>
                                 <!-- </form> -->
